@@ -123,7 +123,7 @@ const useHandleEditorInstanceLifecycle = ({
     }
     return () => {
       editor?.toTextArea()
-      // @ts-expect-error
+
       editor?.cleanup()
     }
   }, [textRef, currentValueRef, id, imageUploadCallback, options])

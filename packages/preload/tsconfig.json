@@ -1,17 +1,6 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "module": "esnext",
-    "target": "esnext",
-    "sourceMap": false,
-    "moduleResolution": "Node",
-    "skipLibCheck": true,
-    "strict": true,
-    "isolatedModules": true,
-
-    // Don't automatically include anything.
-    // Only include `@types` packages that we need to import.
-    "types" : [],
-
     "baseUrl": ".",
     "paths": {
       "/@/*": [
@@ -19,12 +8,11 @@
       ]
     }
   },
-  "include": [
-    "src/**/*.ts",
-    "../../types/**/*.d.ts"
+  "files": [
+    "types/electron-api.d.ts",
+    "src/index.ts"
   ],
-  "exclude": [
-    "**/*.spec.ts",
-    "**/*.test.ts"
+  "include": [
+    "../../types/**/*.d.ts"
   ]
 }
